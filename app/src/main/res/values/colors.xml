@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_light_surface">#FFE0EACE</color>
+    <color name="md_theme_dark_surface">#FF373F29</color>
+</resources>
