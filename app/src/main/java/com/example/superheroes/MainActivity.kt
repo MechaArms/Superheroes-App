@@ -7,11 +7,9 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -141,13 +139,7 @@ fun SuperheroesCardPreview() {
             descriptionRes = R.string.description1,
             imageRes = R.drawable.android_superhero1
         )
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            HeroCard(hero = hero)
-        }
+        HeroCard(hero = hero)
     }
 }
 
@@ -161,13 +153,7 @@ fun SuperheroesCardDarkPreview() {
             descriptionRes = R.string.description1,
             imageRes = R.drawable.android_superhero1
         )
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            HeroCard(hero = hero)
-        }
+        HeroCard(hero = hero)
     }
 }
 
