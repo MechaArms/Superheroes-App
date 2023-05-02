@@ -97,7 +97,7 @@ fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
                 .padding(16.dp)
         ) {
             HeroInformation(hero.nameRes,hero.descriptionRes)
-            Spacer(Modifier.padding(16.dp))
+            Spacer(Modifier.weight(1f))
             HeroIcon(hero.imageRes)
         }
     }
@@ -132,7 +132,7 @@ fun HeroIcon(@DrawableRes imageRes: Int, modifier: Modifier = Modifier) {
 }
 
 // Light Theme Card Preview
-@Preview
+@Preview(name = "Light Theme Card")
 @Composable
 fun SuperheroesCardPreview() {
     SuperheroesTheme(darkTheme = false) {
@@ -152,7 +152,7 @@ fun SuperheroesCardPreview() {
 }
 
 // Dark Theme Card Preview
-@Preview
+@Preview(name = "Dark Theme Card")
 @Composable
 fun SuperheroesCardDarkPreview() {
     SuperheroesTheme(darkTheme = true) {
@@ -171,20 +171,21 @@ fun SuperheroesCardDarkPreview() {
     }
 }
 
-//// Dark Theme App Preview
-//@Preview
-//@Composable
-//fun SuperheroesDarkPreview() {
-//    SuperheroesTheme(darkTheme = false) {
-//        SuperheroesApp()
-//    }
-//}
-//
-//// Dark Theme App Preview
-//@Preview
-//@Composable
-//fun SuperheroesDarkPreview() {
-//    SuperheroesTheme(darkTheme = true) {
-//        SuperheroesApp()
-//    }
-//}
+// Light Theme App Preview
+@Preview(name = "Light Theme App")
+@Composable
+fun SuperheroesLightPreview(){
+    SuperheroesTheme(darkTheme = false) {
+        SuperheroesApp()
+    }
+}
+
+
+// Dark Theme App Preview
+@Preview(name = "Dark Theme App")
+@Composable
+fun SuperheroesDarkPreview() {
+    SuperheroesTheme(darkTheme = true) {
+        SuperheroesApp()
+    }
+}
