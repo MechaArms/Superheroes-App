@@ -65,11 +65,11 @@ fun SuperheroesApp() {
 
 @Composable
 fun SuperheroesTopAppBar(modifier: Modifier = Modifier) {
-    Row(
+    Column(
         modifier = modifier
             .fillMaxWidth()
-            .background(color = MaterialTheme.colors.primary),
-        verticalAlignment = Alignment.CenterVertically
+            .background(color = MaterialTheme.colors.background),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = stringResource(R.string.app_name),
