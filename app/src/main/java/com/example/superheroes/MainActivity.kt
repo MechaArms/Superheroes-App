@@ -7,12 +7,14 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -93,6 +95,7 @@ fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
+                .sizeIn(minHeight = 72.dp)
         ) {
             HeroInformation(hero.nameRes,hero.descriptionRes)
             Spacer(Modifier.weight(1f))
@@ -118,15 +121,22 @@ fun HeroInformation(@StringRes nameRes: Int, @StringRes descriptionRes: Int, mod
 
 @Composable
 fun HeroIcon(@DrawableRes imageRes: Int, modifier: Modifier = Modifier) {
-    Image(
+    Box(
         modifier = modifier
-            .size(64.dp)
-            .padding(8.dp)
-            .clip(RoundedCornerShape(8)),
-        contentScale = ContentScale.Crop,
-        painter = painterResource(imageRes),
-        contentDescription = null
-    )
+            .size(72.dp)
+            .clip(RoundedCornerShape(8.dp))
+
+    ) {
+        Image(
+//            modifier = modifier
+//                .size(64.dp)
+//                .padding(8.dp),
+            painter = painterResource(imageRes),
+            contentDescription = null,
+            alignment = Alignment.TopCenter,
+            contentScale = ContentScale.FillWidth
+        )
+    }
 }
 
 // Light Theme Card Preview

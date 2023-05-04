@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Theme.Superheroes" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/md_theme_light_surface</item>
+        <item name="android:statusBarColor">@color/md_theme_light_background</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>
